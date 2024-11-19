@@ -1,11 +1,10 @@
-import java.util.Scanner;
+import java.util.Scanner; // Se importa la clase Scanner del paquete java.util para leer las entradas del usuario desde la consola. 
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("CALCULADORA DE FACTORIAL Y FUNCION ACKERMAN");
+    public static void main(String[] args) { // Se establece el punto de partida para la ejecucion del programa.
+        System.out.println("CALCULADORA DE FACTORIAL Y FUNCION ACKERMAN"); 
 
-        // Crear objeto Scanner
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); // Se crea el objeto scanner con la instancia System.in para reconocer las entradas de datos del usuario
 
         // Solicitar y leer valores del usuario
         System.out.println("Ingrese el valor de x como número entero:");
@@ -21,19 +20,18 @@ public class Main {
         // Calcular la función de Ackermann
         System.out.println("Ackermann(" + numerox + ", " + numeroy + ") es: " + ackermann(numerox, numeroy));
 
-        // Cerrar el objeto Scanner
-        scanner.close();
+        scanner.close(); // Despues de calcular la función de Ackermann se cierra el scanner.
     }
 
-    // Método recursivo para calcular el factorial
+    // Método para calcular el factorial
     public static int factorial(int n) {
-        if (n == 0 || n == 1) {
+        if (n == 0 || n == 1) { // Si el valor de n es 0 o 1, se devuelve 1 directamente.
             return 1; // Caso base
         }
         return n * factorial(n - 1); // Llamada recursiva
     }
 
-    // Método recursivo para calcular la función de Ackermann
+    // Método para calcular la función de Ackermann
     public static int ackermann(int x, int y) {
         if (x == 0) {
             return y + 1; // Caso base 1
